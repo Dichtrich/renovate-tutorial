@@ -1,0 +1,50 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    bandwidth.com/clusterName: app1.atl1
+    bandwidth.com/owner: platform
+  name: atlas-filebeat-app1-atl1
+  namespace: atlas
+spec:
+  project: atlas
+  source:
+    chart: airflow
+    helm:
+      values: |
+        aws:
+          accountId: "794100652945"
+          secretsManagerReadRoleName: BWApp_platform_SecretsManagerReadRole
+          secretRef: "platform/atlas/prod/app1-atl1/text/filebeat"
+        cluster:
+          name: app1.atl1
+          site: atl1
+        config:
+          namespace: "atlas-filebeat"
+          resources: 
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 200Mi
+        kafka:
+          output: 
+            - clec.kafka.svc:9093
+        legacy311Cluster: false
+    repoURL: 'https://charts.bitnami.com/bitnami'
+    targetRevision: 16.1.2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  destination:
+    name: app1.atl1
+    namespace: atlas-filebeat
+  ignoreDifferences:
+    - group: security.openshift.io
+      jsonPointers:
+        - /requiredDropCapabilities
+        - /defaultAddCapabilities
+        - /allowedCapabilities
+      kind: SecurityContextConstraints
