@@ -32,6 +32,19 @@
       }
     }
   ],
+  "customManagers": [
+    {
+        "customType": "regex",
+        "fileMatch": ["\\.ya?ml$"],
+        "matchStringsStrategy": "combination",
+        "matchStrings": [
+            "[\\s-]*targetRevision:\\s+\"?(?<currentValue>[^\"\\s]+)\"?\\s*",
+            "[\\s-]*chart:\\s+\"?(?<depName>[^\"\\s]+)\"?\\s*",
+            "[\\s-]*repoURL:\\s+\"?(?<registryUrl>[^\"\\s]+)\"?\\s*",
+        ],
+        "datasourceTemplate": "helm"
+    },
+]
   "includePaths": [
     "gitops/**"
   ]
