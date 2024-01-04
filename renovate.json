@@ -33,8 +33,6 @@
     }
   ],
   "includePaths": [
-    ".github/workflows/**",
-    "bootstrap/openshift/**",
     "gitops/**"
   ]
 }
