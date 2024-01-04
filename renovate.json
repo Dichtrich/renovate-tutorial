@@ -3,7 +3,12 @@
   "extends": [
     "config:base"
   ],
-  "prHourlyLimit": 3,
+  "additionalBranchPrefix": "{{{parentDir}}}-",
+  "commitMessagePrefix": "PLAT-3487",
+  "commitMessageSuffix": "({{baseDir}})",
+  "bumpVersion": "patch",
+  "assigneesFromCodeOwners": true,
+  "reviewersFromCodeOwners": true,
   "packageRules": [
     {
       "matchPackagePatterns": [
@@ -16,5 +21,28 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch"
     }
+  ],
+  "hostRules": [
+    {
+      "matchHost": "bandwidth.jfrog.io/artifactory/helm/",
+      "hostType": "helm",
+      "encrypted": {
+        "username": "wcFMA/xDdHCJBTolAQ/+NX3A48cDH33sqS2jv6YcKpjJDJ6Tn4c9W3vqtgqJabE4Vjy/8x9G1LHpKqN30bo9ZkDtj/bETh/8dZ1BxUTvRyX3XP549kKmXgYGmplbO79OvR9yWL7wK6YDh4EHhIXFYJd3ZPnkff6KNLcmqPwgwceHPH6yiIBV+0vtRvYjX3nFb7XRuidvYEl3yAkTZ79e2h0VoyrvPwLIxmoX+nTbjGwemGBB5Jws2XlOs61NXXxc6WQEDmtMLkfJoYgSxD/Z3Rbkm2keWFHgKcSZhwU/K3cvCRlaLjPqo/zRt/FOeY65NE2WcXK+dB+MuRtMWXPAQZArKi/UuV2UVE+tU+zUfhNHHQ5xNW89akGYhI1zwl6H8AD/cS13tUkzMl48eYWoqn5YLA/PqJAJTxReGAZNp2zHf0dae3MOZA4qE4pIHXi1mfkIxzGxb5fxSbjuci3/K7tnnGRq8Ot5f2KHBh80dBa/pNcf9qQ1lnv+dtBk8vSipK2Qo3936lQjYUy6kaeF7HSM3fW1+5Iq6s+UE48prjnAzCO1AST/dHYzyobDcL6SQNWAQm2xnEMMH/5b+Sp5ikDwFCw2Bkqk5jlz18IiNpbSiI6OHd9J0C3RnZ0qxrDnSxLEbzcHVY/w9zxMrisAXknzdw/yGd8BMz3M747L40fa67v9G11gLMs4yTFugSTSZQH51JNL96Iy1mOSVTLIaV4FtWy2dZSPkVf/mliYjx1bm1hd1kkTpGeM9qZyR+7Rgwh0tfUVBt7zGZmicMA5ULCG/Rdf/bhrMb6Oge8bo2hop1VezNRyPOFUOqqj9CFZhusuAEP4",
+        "token": "wcFMA/xDdHCJBTolAQ/+NOdbyAC9VhuaXshtqO6AP/2Df5Hiu7DMwfpA2WDXDl9BmT/YS57nIzMHvpXDnmGmuMLfjv5TPEXGSP5dlQ1fPs/S2aWTOWt3vnHfZPsjJTbHsbiUvheoLktGYPzvxBQ30TJom4L61Xf/nKBykeSARYv8/Wg9/sk36uv613RUS25Jg0FBdnfziHKDa/qa+d69AcNXcqFSWMgxRnusfZbiM6o5idJmjDvbH3q8guJ55ixe0V/Sh4zw7LgYIlP4Kko7ueFLA3/ISsTzS4mK2Adade4f61U/inlr9NLGTx8jzzXnAUcPGkUfi7k+fKb0GZl+X+DWolrxP78IpntISaWUd+RSDPi2d8urS58kT2hLNWc28elxiPlAp0hbuCEjQ2/uagKchdE9Papnyc0+UlyL2qpyZOdoEc9VdDZT39HkeZBJh0OeSn2TKjGyfZLJC0wMyFYfvuIoRF3t5VFgl/BBHev2kmEPOYXBtKu+O+7QM78H4q5tV5e2Rt1yKpsn3BBeqoHQLdTwMkubPWF1+Gg8+fcnZ50/qj4dTLZswZBDVyvINnrpKh0V/YiJPreDFAlNLv/eBc1BtMeMeJRx7TrT3BNTl6dbbyEIkRsU4QO64yvXQZQ13RUpWhVtI1F/tA33rGiOBAtigyZArlNdp+9pQ5xECQ9leCbajVKKoTW13vnSwrcBQupJEF+su7PDrMHvRhfZE22WYlFeN1sbdp9U1mF+QBDVTtaiQmyMfmAbb3sIo6MWGq52Yw9RI7TrJAiZ2vh0wXBI1WXxbsKRSxL3BxZowdaN6kM0kjwzvZk0HbSDz5wR5unbNiD2RRzhM35H0mY17kBKFCTpmelEw5/6PdZQX6pUhCrLy5vyshhv7WvwuAT6dWIXuEKi91++UzABK9UIM7rvzhcf66q8jAGDJ0g4xQ3r4tZMfSL80buyQyligvi1vU1qSXLl+iSzXbr9WEEn8LEcOJA6mktHI76bUvOSvaDCLT6KJV+8co5+I366MAuZZHiG/TcIqk9j5QZ0EVhlVqlnaC1muYDHKClwN1e8F+iT538zcSRnjgnMXoiqblUhnJERXATyT4JnZ5WwWIKODOIOWbCxeAo5zSPfVpGAqkODwfoQZ1p66dsfq3xIZn0ndnCiLm5J4yNAKHN2c/BvmAV8rCkA//hEeBirOeCrgbEQmzl8LEhh7BqpfzuzvUb9q78hqjyypHW5Bf9fuidzxkhIMmNhRtpp80pcRaAfDmid9ExiRVHwvqywcjEZMvVU4jxuasUAXy3zRFhS/aLDbcucsZJZX3Iga8d6i/dOsgQqZ2zMdNfUlu9xv4xHkaPIQuhwUCXRnEjMOBsKulAk6GmsxCFsdbMWZXdekOvflj9HjWP1C27//bqvr8gySAtsqwXTQinVg2nk431O07HUkcqG0hA2Gi1EzhfqLVtXqHeBor0XthYV2eUB+bbKQf99pxpKpVa0pn3oJxMovzqID9+SvX1Mh+I+KWtas5Anfn57XsidtmmFEx2dLOMnB+yRt5QABeEB6r7ccLao6H4mFuLdjv5+tRHlNnymTJFFImOzzt7csjvqaZcosl8grnRysRAVQVEbJ7YkOW/vGlJ2dEyHYzwmOyXjlezzDMvSExt/58kRJZxm8TEPQlqq0ZiDQrz7hq2aixWFRFpfl/1ApwoEzjL92ZhiltHAUw4ZU28b3IZApU5GqLTsNeGvK0uO3ftGVX9I/F/IrG6BYUOlKjmHbyMP3DEpMsWtovizqnKkDGqKebvmGdUoXxavYdyaTPZCA9kvCxueKWAVlGFSAW043Egkyn/xi58G87zngUjoA/Th4BJ0X+4xLIQ/E/knewjxTq3i4eb1tzM9yTXUgT7BICkVhA"
+      }
+    },
+    {
+      "matchHost": "bandwidth-docker-prod.jfrog.io",
+      "hostType": "docker",
+      "encrypted": {
+        "username": "wcFMA/xDdHCJBTolAQ/+NX3A48cDH33sqS2jv6YcKpjJDJ6Tn4c9W3vqtgqJabE4Vjy/8x9G1LHpKqN30bo9ZkDtj/bETh/8dZ1BxUTvRyX3XP549kKmXgYGmplbO79OvR9yWL7wK6YDh4EHhIXFYJd3ZPnkff6KNLcmqPwgwceHPH6yiIBV+0vtRvYjX3nFb7XRuidvYEl3yAkTZ79e2h0VoyrvPwLIxmoX+nTbjGwemGBB5Jws2XlOs61NXXxc6WQEDmtMLkfJoYgSxD/Z3Rbkm2keWFHgKcSZhwU/K3cvCRlaLjPqo/zRt/FOeY65NE2WcXK+dB+MuRtMWXPAQZArKi/UuV2UVE+tU+zUfhNHHQ5xNW89akGYhI1zwl6H8AD/cS13tUkzMl48eYWoqn5YLA/PqJAJTxReGAZNp2zHf0dae3MOZA4qE4pIHXi1mfkIxzGxb5fxSbjuci3/K7tnnGRq8Ot5f2KHBh80dBa/pNcf9qQ1lnv+dtBk8vSipK2Qo3936lQjYUy6kaeF7HSM3fW1+5Iq6s+UE48prjnAzCO1AST/dHYzyobDcL6SQNWAQm2xnEMMH/5b+Sp5ikDwFCw2Bkqk5jlz18IiNpbSiI6OHd9J0C3RnZ0qxrDnSxLEbzcHVY/w9zxMrisAXknzdw/yGd8BMz3M747L40fa67v9G11gLMs4yTFugSTSZQH51JNL96Iy1mOSVTLIaV4FtWy2dZSPkVf/mliYjx1bm1hd1kkTpGeM9qZyR+7Rgwh0tfUVBt7zGZmicMA5ULCG/Rdf/bhrMb6Oge8bo2hop1VezNRyPOFUOqqj9CFZhusuAEP4",
+        "token": "wcFMA/xDdHCJBTolAQ/+NOdbyAC9VhuaXshtqO6AP/2Df5Hiu7DMwfpA2WDXDl9BmT/YS57nIzMHvpXDnmGmuMLfjv5TPEXGSP5dlQ1fPs/S2aWTOWt3vnHfZPsjJTbHsbiUvheoLktGYPzvxBQ30TJom4L61Xf/nKBykeSARYv8/Wg9/sk36uv613RUS25Jg0FBdnfziHKDa/qa+d69AcNXcqFSWMgxRnusfZbiM6o5idJmjDvbH3q8guJ55ixe0V/Sh4zw7LgYIlP4Kko7ueFLA3/ISsTzS4mK2Adade4f61U/inlr9NLGTx8jzzXnAUcPGkUfi7k+fKb0GZl+X+DWolrxP78IpntISaWUd+RSDPi2d8urS58kT2hLNWc28elxiPlAp0hbuCEjQ2/uagKchdE9Papnyc0+UlyL2qpyZOdoEc9VdDZT39HkeZBJh0OeSn2TKjGyfZLJC0wMyFYfvuIoRF3t5VFgl/BBHev2kmEPOYXBtKu+O+7QM78H4q5tV5e2Rt1yKpsn3BBeqoHQLdTwMkubPWF1+Gg8+fcnZ50/qj4dTLZswZBDVyvINnrpKh0V/YiJPreDFAlNLv/eBc1BtMeMeJRx7TrT3BNTl6dbbyEIkRsU4QO64yvXQZQ13RUpWhVtI1F/tA33rGiOBAtigyZArlNdp+9pQ5xECQ9leCbajVKKoTW13vnSwrcBQupJEF+su7PDrMHvRhfZE22WYlFeN1sbdp9U1mF+QBDVTtaiQmyMfmAbb3sIo6MWGq52Yw9RI7TrJAiZ2vh0wXBI1WXxbsKRSxL3BxZowdaN6kM0kjwzvZk0HbSDz5wR5unbNiD2RRzhM35H0mY17kBKFCTpmelEw5/6PdZQX6pUhCrLy5vyshhv7WvwuAT6dWIXuEKi91++UzABK9UIM7rvzhcf66q8jAGDJ0g4xQ3r4tZMfSL80buyQyligvi1vU1qSXLl+iSzXbr9WEEn8LEcOJA6mktHI76bUvOSvaDCLT6KJV+8co5+I366MAuZZHiG/TcIqk9j5QZ0EVhlVqlnaC1muYDHKClwN1e8F+iT538zcSRnjgnMXoiqblUhnJERXATyT4JnZ5WwWIKODOIOWbCxeAo5zSPfVpGAqkODwfoQZ1p66dsfq3xIZn0ndnCiLm5J4yNAKHN2c/BvmAV8rCkA//hEeBirOeCrgbEQmzl8LEhh7BqpfzuzvUb9q78hqjyypHW5Bf9fuidzxkhIMmNhRtpp80pcRaAfDmid9ExiRVHwvqywcjEZMvVU4jxuasUAXy3zRFhS/aLDbcucsZJZX3Iga8d6i/dOsgQqZ2zMdNfUlu9xv4xHkaPIQuhwUCXRnEjMOBsKulAk6GmsxCFsdbMWZXdekOvflj9HjWP1C27//bqvr8gySAtsqwXTQinVg2nk431O07HUkcqG0hA2Gi1EzhfqLVtXqHeBor0XthYV2eUB+bbKQf99pxpKpVa0pn3oJxMovzqID9+SvX1Mh+I+KWtas5Anfn57XsidtmmFEx2dLOMnB+yRt5QABeEB6r7ccLao6H4mFuLdjv5+tRHlNnymTJFFImOzzt7csjvqaZcosl8grnRysRAVQVEbJ7YkOW/vGlJ2dEyHYzwmOyXjlezzDMvSExt/58kRJZxm8TEPQlqq0ZiDQrz7hq2aixWFRFpfl/1ApwoEzjL92ZhiltHAUw4ZU28b3IZApU5GqLTsNeGvK0uO3ftGVX9I/F/IrG6BYUOlKjmHbyMP3DEpMsWtovizqnKkDGqKebvmGdUoXxavYdyaTPZCA9kvCxueKWAVlGFSAW043Egkyn/xi58G87zngUjoA/Th4BJ0X+4xLIQ/E/knewjxTq3i4eb1tzM9yTXUgT7BICkVhA"
+      }
+    }
+  ],
+  "includePaths": [
+    ".github/workflows/**",
+    "bootstrap/openshift/**",
+    "gitops/**"
   ]
 }
