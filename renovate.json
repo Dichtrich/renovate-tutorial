@@ -32,6 +32,9 @@
       }
     }
   ],
+  "argocd": {
+      "fileMatch": ["gitops/.+\\.yaml$"]
+  },
   "includePaths": [
     "gitops/**"
   ]
