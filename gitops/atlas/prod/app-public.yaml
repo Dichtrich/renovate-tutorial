@@ -33,7 +33,7 @@ spec:
             - clec.kafka.svc:9093
         legacy311Cluster: false
     repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 16.1.2
+    targetRevision: 16.4.0
   syncPolicy:
     automated:
       prune: true
