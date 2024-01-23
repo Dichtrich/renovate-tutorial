@@ -14,6 +14,9 @@
       "matchPackageNames": [
         "atlas-namespace"
       ],
+      "excludePackageNames": [
+        "*"
+      ],
       "matchUpdateTypes": [
         "minor",
         "patch"
