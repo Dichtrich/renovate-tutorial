@@ -24,7 +24,7 @@
   ],
   "hostRules": [
     {
-      "matchHost": "bandwidth.jfrog.io/artifactory/helm/atlas-namespace",
+      "matchHost": "bandwidth.jfrog.io/artifactory/helm/",
       "hostType": "helm",
       "encrypted": {
         "username": "wcFMA/xDdHCJBTolARAAiW8QRYpbPouAWN0918RU8QZYKkUG6CH8jEQYJqIGNa2s3QdKlQTJRzzB0kD/npe6b/LRvyVBfuO6E7YkRjfI18nGP+uUybUqirye6z5fJERCHrFXs/uKRlJPZDw4kLPoWKfvq0O8Ra1A8TSWww97WQik9LuH3UZMqyHVaCr2ePfU7/Q8PsSoE7lqrHVlnIsDDftdLj79/Po777R212NH+PQuIZBrU3CoFBUsZVkVJWZ/vidgfdcV0wZ2Z60LOKI8h9RbDrxRiSb2fDBo16WUo7gTwzmvrHw07mTu+ArrGYolxqsH/zw9Ps3cSbDOXStLCoBKm8B2uc975SMuHW39kC73sPHRTB2UJj/TKMwmdbCsLLNyYf8oHBpmwNUCaA2bCxQ9yMF1tnZDqjiYRiNR7cbVU5oslrrzUOKBZ+S3F8/0I19+V+27neHr04Y890zwDLmBF/J8oqDf0NcrNFZ4Qm5AY1oZx8O5b6UG116wClzIxPlRqllKIB8tjcszkcR1KpmXwlD+RJVJ1CZtw24KIzE2RGVfBQ8sB7c+f95jMDa1T6EQDErvaW5x2+cDp2TxrymDo+AXSKzYfQH3ZAb1PIoATkJHfPBWepciq6CNhBrKuyqv0RkGtQNFJXvJlDXVLSPG79Gh2ta6sIf+UmsyfG2u+Z2NngW9QT/I2wp4YF3SYwGCbngQP2I3i03Ly0YkXp4wkHHSgovJ5r1iT7hSPme08pXfkQeyGW2Jy+JtlgiK2tDfX4knxxUZmknVCxNRSA+RmDBcTyBT3LMRYkqUA/2pIr1fDoxFLR7BFRx9UV5L+zuOgw",
