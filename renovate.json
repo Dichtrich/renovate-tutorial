@@ -11,11 +11,10 @@
   "reviewersFromCodeOwners": true,
   "packageRules": [
     {
-      "matchPackageNames": [
-        "atlas-namespace"
+      "matchPackagePattern": [
+        "^atlas-namespace$"
       ],
       "excludePackageNames": [
-        "*",
         "atlas-filebeat"
       ],
       "matchUpdateTypes": [
