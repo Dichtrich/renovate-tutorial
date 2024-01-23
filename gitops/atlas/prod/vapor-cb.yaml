@@ -1,0 +1,53 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vapor-cb-namespaces-app1-dfw1
+  labels:
+    bandwidth.com/clusterName: app1.dfw1
+    bandwidth.com/owner: paradox
+spec:
+  project: atlas
+  source:
+    chart: 'atlas-namespace'
+    repoURL: 'https://bandwidth.jfrog.io/artifactory/helm'
+    targetRevision: 0.5.6
+    helm:
+      values: |-
+        app: vapor
+        team: paradox
+        nodeSelectorOverride: "node-role.kubernetes.io/worker="
+
+        namespaces:
+          vapor-cb: {}
+
+        podAnnotations:
+          ad.datadoghq.com/tags: |-
+            {
+              "owner": "voice-paradox",
+              "env": "prod",
+              "app": "vapor",
+              "component": "voice"
+            }
+
+        resourceQuota:
+          requests:
+            cpu: 15
+            memory: 15Gi
+          limits:
+            cpu: 30
+            memory: 30Gi
+
+        rbac:
+          - name: admin
+            roleRef:
+              name: admin
+            groups:
+              - "BAND Paradox"
+              - "Development - Voice"
+  destination:
+    name: app1.dfw1
+    namespace: atlas
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
