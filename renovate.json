@@ -15,7 +15,8 @@
         "atlas-namespace"
       ],
       "excludePackageNames": [
-        "*"
+        "*",
+        "atlas-filebeat"
       ],
       "matchUpdateTypes": [
         "minor",
