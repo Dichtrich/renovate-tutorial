@@ -11,9 +11,6 @@
   "reviewersFromCodeOwners": true,
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "*"
-      ],
       "matchPackageNames": [
         "atlas-namespace"
       ],
