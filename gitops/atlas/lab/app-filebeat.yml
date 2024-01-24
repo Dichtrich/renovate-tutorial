@@ -33,7 +33,7 @@ spec:
             - clec.kafka.svc:9093
         legacy311Cluster: false
     repoURL: 'https://bandwidth.jfrog.io/artifactory/helm'
-    targetRevision: 0.3.2
+    targetRevision: 0.3.8
   syncPolicy:
     automated:
       prune: true
