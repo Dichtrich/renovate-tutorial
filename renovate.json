@@ -24,8 +24,7 @@
     {
       "description": "Re-enable atlas-namespace packages",
       "matchPackageNames": [
-        "atlas-namespace",
-        "atlas-filebeat"
+        "atlas-namespace"
       ],
       "enabled": true
     }
