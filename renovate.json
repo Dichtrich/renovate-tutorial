@@ -11,18 +11,22 @@
   "reviewersFromCodeOwners": true,
   "packageRules": [
     {
-      "matchPackagePattern": [
-        "^atlas-namespace$"
-      ],
-      "excludePackageNames": [
-        "atlas-filebeat"
-      ],
       "matchUpdateTypes": [
         "minor",
         "patch"
       ],
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch"
+    }
+    {
+      "description": "Disable all packages from updating",
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "description": "Re-enable atlas-namespace packages",
+      "packagePatterns": ["^atlas-namespace$"],
+      "enabled": true
     }
   ],
   "hostRules": [
