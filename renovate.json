@@ -25,7 +25,9 @@
     },
     {
       "description": "Re-enable atlas-namespace packages",
-      "packagePatterns": ["^atlas-namespace$"],
+      "matchPackageNames": [
+        "atlas-namespace"
+      ],
       "enabled": true
     }
   ],
