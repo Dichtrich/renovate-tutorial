@@ -14,9 +14,7 @@
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
+      ]
     },
     {
       "description": "Disable all packages from updating",
