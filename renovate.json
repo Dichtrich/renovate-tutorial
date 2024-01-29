@@ -9,6 +9,7 @@
   "bumpVersion": "patch",
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
+  "rebaseWhen": "conflicted",
   "packageRules": [
     {
       "matchUpdateTypes": [
