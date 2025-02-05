@@ -10,7 +10,7 @@ spec:
   source:
     chart: 'atlas-namespace'
     repoURL: 'https://bandwidth.jfrog.io/artifactory/helm'
-    targetRevision: 0.5.6
+    targetRevision: 0.7.5
     helm:
       values: |-
         app: vapor
